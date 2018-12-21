@@ -1,0 +1,43 @@
+.reviews_slider:not(.slick-initialized)
+	.reviews_slider__item
+		margin-bottom: 40px
+
+.reviews_slider__item_image_wrapper
+	overflow: hidden
+	width: 178px
+	height: 178px
+	border-radius: 100%
+	margin: 0 auto
+
+
+.reviews_slider__item_text
+	padding: 0 150px
+
+
+
+.reviews_slider_nav
+	position: relative
+	.slick-dots
+		border: initial
+		display: flex
+		left: initial
+		align-items: center
+		justify-content: center
+		li
+			width: 18px
+			height: 18px
+			background: #fff
+			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3)
+			border-radius: 100%
+			margin-left: 12px
+			margin-right: 12px
+			border-color: #fff
+			transition: all 200ms ease-in
+			&.slick-active
+				background: $bg-blue
+				border: 2px solid #fff
+				box-shadow: none
+				width: 20px
+				height: 20px
+			button
+				display: none

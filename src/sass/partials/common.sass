@@ -1,0 +1,76 @@
+/* VARS */
+$bg-orange: #fa6900
+$bg-blue: #69d2e7
+$bg-silver: #f1f1f1
+$bg-white: #fff
+
+body
+	font-family: 'Open Sans', sans-serif
+	font-size: 16px
+	font-weight: 300
+	color: #000
+
+@function calc-rem($px)
+	@return ($px / 16)+rem
+
+=fs($px)
+	font-size: calc-rem($px)
+
+
+.border_radius_100
+	border-radius: 100%
+.border_radius_10
+	border-radius: 10px
+
+.theme_orange
+	background: #fa6900
+.theme_blue
+	background: #69d2e7
+.theme_silver
+	background: #f1f1f1
+.theme_white
+	background: #fff
+
+.text_light
+	font-weight: 300
+.text_regular
+	font-weight: 400
+.text_semi_bold
+	font-weight: 600
+.text_bold
+	font-weight: 700
+.text_extra_bold
+	font-weight: 800
+.line_height_1
+	line-height: 1
+
+.color_white
+	color: #fff
+.color_black
+	color: #000
+h1
+	+fs(83.29)
+h2
+	+fs(36)
+h3
+	+fs(31.23)
+h4
+	+fs(26)
+h5
+	+fs(22)
+
+.special_pos
+	transform: translateY(-90px)
+
+
+.title_underline
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		height: 1px
+		width: 45%
+		background: #d5d5d5
+		left: 50%
+		transform: translateX(-50%)
