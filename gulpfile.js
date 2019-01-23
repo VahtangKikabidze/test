@@ -82,22 +82,7 @@ gulp.task('style:build', async function () {
     .pipe(reload({stream: true}));
 });
 
-gulp.task('image:build', async function () {
-    gulp.src(path.src.img)
-    .pipe(imagemin({
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
-        use: [pngquant()],
-        interlaced: true
-    }))
-    .pipe(gulp.dest(path.build.img))
-    .pipe(reload({stream: true}));
-});
 
-gulp.task('fonts:build', async function() {
-    gulp.src(path.src.fonts)
-    .pipe(gulp.dest(path.build.fonts))
-});
 
 gulp.task('build', [
     'html:build',
